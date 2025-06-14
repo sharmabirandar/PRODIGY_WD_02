@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stopwatch Application</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" role="main" aria-label="Stopwatch application">
+    <header>
+      <h1>Stopwatch</h1>
+    </header>
+    <div class="stopwatch-display" aria-live="polite" aria-atomic="true" id="time-display">00:00.000</div>
+    <div class="controls" role="region" aria-label="Stopwatch controls">
+      <button type="button" id="start-pause-btn" aria-pressed="false" aria-label="Start stopwatch" class="btn-start">
+        <span class="material-icons" aria-hidden="true">play_arrow</span>
+        Start
+      </button>
+      <button type="button" id="lap-btn" aria-label="Record lap time" disabled>
+        <span class="material-icons" aria-hidden="true">flag</span>
+        Lap
+      </button>
+      <button type="button" id="reset-btn" aria-label="Reset stopwatch" disabled>
+        <span class="material-icons" aria-hidden="true">refresh</span>
+        Reset
+      </button>
+    </div>
+    <section class="laps" aria-live="polite" aria-atomic="false" aria-label="Lap times" role="region" tabindex="0">
+      <h2>Lap Times</h2>
+      <div id="laps-list" aria-relevant="additions" aria-live="polite" role="list"></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
